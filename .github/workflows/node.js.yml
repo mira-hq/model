@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run generate
-      - name: publish to npm registery
+      - name: Publish to npm registery
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npm publish --access=public
         env:
