@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
-    "graphql": "^15.5.0"
+    "graphql": "^15.5.0",
+    "graphql-codegen-apollo-next-ssr": "^1.4.0"
   }
 }

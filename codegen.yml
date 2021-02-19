@@ -1,5 +1,7 @@
 overwrite: true
 schema: "src/schema.graphql"
+documents:
+  - "src/operation.graphql"
 generates:
   dist/index.ts:
     plugins:

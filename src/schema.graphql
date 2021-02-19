@@ -1,5 +1,11 @@
+schema {
+    query: Query
+}
+
 type Query {
+    me: User!
     servers: [Server]
+    server(uuid: String): Server
 }
 
 type User {
