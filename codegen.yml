@@ -7,6 +7,8 @@ generates:
       - "typescript-operations"
       - "typescript-resolvers"
       - "typescript-react-apollo"
-  ./graphql.schema.json:
-    plugins:
-      - "introspection"
+    config:
+      immutableTypes: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write

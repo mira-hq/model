@@ -19,9 +19,9 @@ type Server {
 }
 
 enum ServerStatus {
-    Starting
-    Stopping
-    Stopped
-    Running
-    Terminated
+    STARTING
+    STOPPING
+    STOPPED
+    STARTED
+    TERMINATED
 }
