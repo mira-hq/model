@@ -9,6 +9,14 @@ generates:
       - "typescript-react-apollo"
     config:
       immutableTypes: true
+  dist/index.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-resolvers"
+      - "typescript-react-apollo"
+    config:
+      immutableTypes: true
 hooks:
   afterAllFileWrite:
     - prettier --write

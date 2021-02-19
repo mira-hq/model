@@ -3,10 +3,10 @@
   "version": "1.0.5",
   "private": false,
   "description": "",
-  "main": "index.js",
   "scripts": {
     "generate": "graphql-codegen --config codegen.yml; cp -r src/** dist/"
   },
+  "main": "./dist/index.ts",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
