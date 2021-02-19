@@ -28,6 +28,6 @@ enum ServerStatus {
     STARTING
     STOPPING
     STOPPED
-    STARTED
+    RUNNING
     TERMINATED
 }
