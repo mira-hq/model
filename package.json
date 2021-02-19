@@ -1,6 +1,7 @@
 {
-  "name": "model",
+  "name": "@mira-hq/model",
   "version": "1.0.0",
+  "private": false,
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,15 +17,13 @@
     "url": "https://github.com/mira-hq/model/issues"
   },
   "homepage": "https://github.com/mira-hq/model#readme",
-  "devDependencies": {
+  "dependencies": {
+    "graphql": "^15.5.0",
     "@graphql-codegen/cli": "1.20.1",
     "@graphql-codegen/introspection": "1.18.1",
     "@graphql-codegen/typescript": "1.21.0",
     "@graphql-codegen/typescript-operations": "1.17.14",
     "@graphql-codegen/typescript-react-apollo": "2.2.1",
     "@graphql-codegen/typescript-resolvers": "1.18.2"
-  },
-  "dependencies": {
-    "graphql": "^15.5.0"
   }
 }
