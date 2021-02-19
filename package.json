@@ -1,12 +1,12 @@
 {
   "name": "@mira-hq/model",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": false,
   "description": "",
   "scripts": {
-    "generate": "graphql-codegen --config codegen.yml; cp -r src/** dist/"
+    "generate": "graphql-codegen --config codegen.yml"
   },
-  "main": "./dist/index.ts",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mira-hq/model.git"
