@@ -9,6 +9,7 @@ generates:
       - "typescript-operations"
       - "typescript-resolvers"
       - "typescript-react-apollo"
+      - "src/typescript-typedefs.js"
     config:
       immutableTypes: true
 hooks:
