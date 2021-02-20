@@ -1,12 +1,15 @@
 {
   "name": "@mira-hq/model",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": false,
   "description": "",
   "scripts": {
-    "generate": "graphql-codegen --config codegen.yml"
+    "build": "npm run generate; npm run compile",
+    "generate": "graphql-codegen --config codegen.yml",
+    "compile": "tsc"
   },
-  "main": "index.ts",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mira-hq/model.git"
@@ -23,7 +26,8 @@
     "@graphql-codegen/typescript-operations": "1.17.14",
     "@graphql-codegen/typescript-react-apollo": "2.2.1",
     "@graphql-codegen/typescript-resolvers": "1.18.2",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5"
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",

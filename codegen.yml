@@ -3,7 +3,7 @@ schema: "src/schema.graphql"
 documents:
   - "src/operation.graphql"
 generates:
-  index.ts:
+  generated/index.ts:
     plugins:
       - "typescript"
       - "typescript-operations"
