@@ -4,7 +4,7 @@
   "private": false,
   "description": "",
   "scripts": {
-    "build": "npm run generate; npm run compile",
+    "build": "npm run generate && npm run compile",
     "generate": "graphql-codegen --config codegen.yml",
     "compile": "tsc",
     "test": "true"
