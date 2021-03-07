@@ -7,15 +7,32 @@ type Query {
   me: User!
   servers: [Server]
   server(uuid: String): Server
+  users: [User]
+  serverLaunches: [ServerLaunch]
 }
 
 type Mutation {
   createServer(serverName: String): Server
+  launchServer(serverUuid: String): ServerLaunch
+  stopServer(serverUuid: String): ServerLaunch
 }
 
 type User {
   uuid: String!
   email: String!
+}
+
+type CreditEntry {
+  uuid: String!
+  amount: Int!
+  payment: Payment
+  author: User
+}
+
+type Payment {
+  uuid: String!
+  amount: Int!
+  source: String!
 }
 
 type Server {
@@ -24,9 +41,20 @@ type Server {
   status: ServerStatus!
   owner: User!
   address: String
-  uptime: Int
-  maxUptime: Int
   playersOnline: Int
+  launches: [ServerLaunch]
+  type: ServerType
+}
+
+scalar Date
+
+type ServerLaunch {
+  uuid: String!
+  server: Server
+  launchTime: Date!
+  stopTime: Date
+  killTime: Date
+  executor: User!
 }
 
 enum ServerStatus {
@@ -36,4 +64,11 @@ enum ServerStatus {
   STOPPED
   RUNNING
   DESTROYED
+}
+
+enum ServerType {
+  AMONG_US,
+  FACTORIO,
+  MINECRAFT,
+  VALHEIM
 }
