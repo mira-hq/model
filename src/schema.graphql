@@ -67,8 +67,8 @@ enum ServerStatus {
 }
 
 enum ServerType {
-  AMONG_US,
-  FACTORIO,
-  MINECRAFT,
+  AMONG_US
+  FACTORIO
+  MINECRAFT
   VALHEIM
 }
