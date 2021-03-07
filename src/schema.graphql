@@ -1,11 +1,16 @@
 schema {
     query: Query
+    mutation: Mutation
 }
 
 type Query {
     me: User!
     servers: [Server]
     server(uuid: String): Server
+}
+
+type Mutation {
+    createServer(serverName: String): Server
 }
 
 type User {

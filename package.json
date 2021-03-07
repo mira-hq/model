@@ -1,13 +1,21 @@
 {
   "name": "@mira-hq/model",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "private": false,
   "description": "",
   "scripts": {
-    "build": "npm run generate && npm run compile",
+    "build": "npm run compile-plugins && npm run generate && npm run compile-generated",
     "generate": "graphql-codegen --config codegen.yml",
-    "compile": "tsc",
-    "test": "true"
+    "compile-plugins": "tsc --project tsconfig-plugins.json",
+    "compile-generated": "tsc --project tsconfig-generated.json",
+    "test": "true",
+    "dev": "graphql-codegen --config codegen.yml --watch",
+    "lint+build": "npm run lint && npm run build",
+    "lint:fix+build": "npm run lint:fix && npm run build",
+    "lint": "npm run prettier",
+    "lint:fix": "npm run prettier:fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
   },
   "main": "dist/index.ts",
   "types": "dist/index.d.ts",
@@ -29,11 +37,21 @@
     "@graphql-codegen/typescript-resolvers": "1.18.2",
     "@graphql-tools/utils": "^7.5.0",
     "graphql-codegen-apollo-next-ssr": "^1.4.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "typescript": "^4.1.5"
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
     "graphql": "^15.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }

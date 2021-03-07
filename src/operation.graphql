@@ -14,7 +14,3 @@ fragment ServerFields on Server {
     uuid
     serverName
 }
-
-type Mutation {
-    createServer(serverName: String): Server
-}
