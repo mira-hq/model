@@ -16,18 +16,19 @@ type User {
 type Server {
     uuid: String!
     serverName: String!
-    address: String
     status: ServerStatus!
-    uptime: Int!
-    maxUptime: Int!
-    playersOnline: Int!
     owner: User!
+    address: String
+    uptime: Int
+    maxUptime: Int
+    playersOnline: Int
 }
 
 enum ServerStatus {
+    CREATED
     STARTING
     STOPPING
     STOPPED
     RUNNING
-    TERMINATED
+    DESTROYED
 }
