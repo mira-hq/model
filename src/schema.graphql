@@ -1,39 +1,39 @@
 schema {
-    query: Query
-    mutation: Mutation
+  query: Query
+  mutation: Mutation
 }
 
 type Query {
-    me: User!
-    servers: [Server]
-    server(uuid: String): Server
+  me: User!
+  servers: [Server]
+  server(uuid: String): Server
 }
 
 type Mutation {
-    createServer(serverName: String): Server
+  createServer(serverName: String): Server
 }
 
 type User {
-    uuid: String!
-    email: String!
+  uuid: String!
+  email: String!
 }
 
 type Server {
-    uuid: String!
-    serverName: String!
-    status: ServerStatus!
-    owner: User!
-    address: String
-    uptime: Int
-    maxUptime: Int
-    playersOnline: Int
+  uuid: String!
+  serverName: String!
+  status: ServerStatus!
+  owner: User!
+  address: String
+  uptime: Int
+  maxUptime: Int
+  playersOnline: Int
 }
 
 enum ServerStatus {
-    CREATED
-    STARTING
-    STOPPING
-    STOPPED
-    RUNNING
-    DESTROYED
+  CREATED
+  STARTING
+  STOPPING
+  STOPPED
+  RUNNING
+  DESTROYED
 }
