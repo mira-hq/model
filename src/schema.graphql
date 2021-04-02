@@ -15,6 +15,7 @@ type Mutation {
   createServer(serverName: String): Server
   launchServer(serverUuid: String): ServerLaunch
   stopServer(serverUuid: String): ServerLaunch
+  createUser(email: String): User
 }
 
 type User {
@@ -66,9 +67,8 @@ enum ServerStatus {
   DESTROYED
 }
 
-enum ServerType {
-  AMONG_US
-  FACTORIO
-  MINECRAFT
-  VALHEIM
+type ServerType {
+  name: String!
+  persistentData: Boolean!
+  persistentConfiguration: Boolean!
 }
