@@ -1,6 +1,6 @@
 {
   "name": "@mira-hq/model",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "private": false,
   "description": "",
   "scripts": {
@@ -17,7 +17,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write ."
   },
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
